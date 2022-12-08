@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import RegistrationPage from "./pages/RegistrationPage";
+import EditManga from "./components/EditManga";
+import CreateManga from "./components/CreateManga";
+import Details from "./components/Details";
+import Header from "./components/Header";
+import CartContextProvider from "./context/CartContextProvider";
+import Cart from "./components/Cart";
+import AuthContextProvider from "./context/AuthContextProvider";
+import Footer from "./components/Footer";
+import MangaContextProvider from "./context/mangaContext";
+import SideBar from "./components/SideBar";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <CartContextProvider>
+          <MangaContextProvider>
+            <AuthContextProvider>
+              <Header />
+              <Routes>
+                <Route path="/register" element={<RegistrationPage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/create" element={<CreateManga />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/edit/:id" element={<EditManga />} />
+                <Route path="/details/:id" element={<Details />} />
+              </Routes>
+              {/* <Footer /> */}
+            </AuthContextProvider>
+          </MangaContextProvider>
+        </CartContextProvider>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default App;

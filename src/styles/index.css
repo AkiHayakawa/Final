@@ -1,0 +1,60 @@
+.Input {
+  /* background-color: rgb(43, 95, 226); */
+
+  margin: 5px;
+  color: aqua;
+}
+.InputDiv {
+  height: 370px;
+  width: 350px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: rgb(43, 95, 226); */
+  /* background-color: rgb(111, 9, 213); */
+  border-radius: 10px;
+}
+.CardList {
+  display: flex;
+  /* margin: 20px; */
+}
+.Card {
+  display: inline;
+  border-color: chocolate;
+}
+.css-1g24dm6-MuiInputBase-input-MuiOutlinedInput-input {
+  width: 400px !important;
+  margin: 15px;
+}
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  padding: 20px;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  border-color: black;
+  border: 14px;
+}
+.SideBarBlock {
+  /* position: fixed; */
+  background-color: white;
+  width: 250px;
+  margin: 15px;
+  height: 100%;
+  margin-right: 0px;
+  border-radius: 14px;
+}
+.image {
+	position	: relative;
+	width		: 300px; /* for IE 6 */
+  height: 300px;
+}
+
+.h2 {
+  border: 4px;
+  border-color: white;
+  color: white;
+	position	: absolute;
+	top		: 200px;
+	left		: 0;
+	width		: 100%;
+}
